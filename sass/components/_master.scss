@@ -1,0 +1,74 @@
+/*Main styles*/
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem; 
+}
+
+/* Typography*/ 
+h2 {
+    color:$black;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+h3 {
+    color:$black;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+h4 {
+    color: $black;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+p {
+    color: $black;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* layout */
+
+ul {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.data-wrapper {
+    display: inline-block;
+    margin: 0 5px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 9px;
+    
+    img { 
+        width: 185px; 
+        max-width: 100%; 
+    }
+}
+
+// PLACEHOLDER CONTAINER
+.container-placeholder-box {
+    padding: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 980px; // change on media queries
+}
+
+.container-placeholder {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin: 0;
+}
+
