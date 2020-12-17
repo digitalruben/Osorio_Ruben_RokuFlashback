@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container nav-container-item">
+            <div class="site-logo">
+                <a href="./index.html" class="nav-current-page"><img src="./images/roku-logo.png" width="50" alt="Nav logo"></a>
+            </div>
+
+            <nav>
+                <ul>
+                    <!-- <li><a href="./index.html" class="nav-current-page"><img src="./images/logo-avatar.png" width="50" alt="Nav logo"></a></li>-->
+                    <li><a href="./index.html">Configuration</a></li>
+                    <!--<li><a href="./index.html">Gallery </a></li>
+                    <li><a href="./index.html">Contact</a></li> -->
+                    <li><a href="./index.html" class="nav-current-page"><img src="./images/user-avatar.png" width="100" alt="user avatar"></a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main id="app">
+        <div class="container-placeholder">
+            <div class="container-placeholder-box">
+               <datacomponent v-for="item in mediaCollection" :item="item" :key="item.id" @setmediatype="setComponent"></datacomponent>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="nav-container nav-container-item">
+            <div class="site-logo">
+                <a href="./index.html" class="nav-current-page"><img src="./images/roku-logo.png" width="115" alt="Nav logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">FB</a></li>
+                    <li><a href="#">IG </a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script defer src='js/main.js' type='module'></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+//Global configuration
+@import "components/_vars.scss";
+@import "components/_master.scss";
+@import "components/_mediaqueries.scss";
+
+// web pages
+@import "components/_home.scss";
+
+@import "components/_kidsmovies.scss";
+@import 'components/_kidstv.scss';
+@import 'components/_kidsmusic.scss';
+
+@import "components/_parentsmovies.scss";
+@import "components/_parentstv.scss";
+@import "components/_parentsmusic.scss";
+
+@import "components/_footer.scss";
+@import "components/_nav.scss";
+
+//media players
+@import "components/_audioPlayer.scss";
+@import "components/_videoPlayer.scss";
+@import "components/_imagePlayer.scss";
+
