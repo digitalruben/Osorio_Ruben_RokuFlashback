@@ -11,7 +11,7 @@ Course deliverables in this repo:
 5. Dev notes.
 6. web layout.
 
-# Prototype: [Prototype](https://ruben741163.invisionapp.com/console/share/3M1XOUWYHT/496937213)
+# Prototype: [Prototype](https://ruben741163.invisionapp.com/console/share/3M1XOUWYHT)
 # Dev notes: [Dev notes](https://docs.google.com/document/d/1ST_VoefA5jk7u4lU7tKrKzcldExtyX1Gkv9epnkSiv8)
 
 ## Description
