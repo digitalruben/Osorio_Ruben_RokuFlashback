@@ -50,15 +50,14 @@ img {
     font-size: 9px;
     
     img { 
-        width: 185px; 
+        width: 180px; 
         max-width: 100%; 
     }
 }
 
 // PLACEHOLDER CONTAINER
 .container-placeholder-box {
-    padding: 50px;
-
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 17, 2020 at 05:49 AM
+-- Generation Time: Dec 17, 2020 at 10:55 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -43,16 +43,16 @@ CREATE TABLE IF NOT EXISTS `media` (
 --
 
 INSERT INTO `media` (`id`, `mediatype`, `title`, `description`, `thumb`, `source`) VALUES
-(1, 'Video', 'Movie placeholder 1', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'placeholder1.jpg', 'placeholder.jpg'),
-(2, 'Graphic', 'Movie placeholder 2', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'placeholder2.jpg', 'placeholder.jpg'),
-(3, 'Audio', 'Movie placeholder 3', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'placeholder3.jpg', 'placeholder.jpg'),
-(4, 'Graphic', 'Movie placeholder 4', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'placeholder4.jpg', 'placeholder.jpg'),
-(5, 'Graphic', 'Movie placeholder 5', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'placeholder5.jpg', 'placeholder.jpg'),
-(6, 'Graphic', 'Movie placeholder 6', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'placeholder6.jpg', 'placeholder.jpg'),
-(7, 'Graphic', 'Movie placeholder 7', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'placeholder7.jpg', 'placeholder.jpg'),
-(8, 'Graphic', 'Movie placeholder 8', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'placeholder8.jpg', 'placeholder.jpg'),
-(9, 'Graphic', 'Movie placeholder 9', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'placeholder9.jpg', 'placeholder.jpg'),
-(10, 'Graphic', 'Movie placeholder 10', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'placeholder10.jpg', 'placeholder.jpg');
+(1, 'Video', 'Back To The Future', 'Marty travels back in time using an eccentric scientist\'s time machine. However, he must make his high-school-aged parents fall in love in order to return to the present.', 'movie1.jpg', 'placeholder.jpg'),
+(2, 'Graphic', 'Pulp Fiction', 'In the realm of underworld, a series of incidents intertwines the lives of two Los Angeles mobsters, a gangster\'s wife, a boxer and two small-time criminals.', 'movie2.jpg', 'placeholder.jpg'),
+(3, 'Audio', 'Jurassic Park', 'Jurassic Park is a 1993 American science fiction adventure film directed by Steven Spielberg and produced by Kathleen Kennedy and Gerald R. Molen.', 'movie3.jpg', 'placeholder.jpg'),
+(4, 'Graphic', 'Jaws', 'A police chief, a marine scientist and a fisherman spring into action after a white shark terrorises the inhabitants of Amity, a quiet island.', 'movie4.jpg', 'placeholder.jpg'),
+(5, 'Graphic', 'Raiders Of The Lost Arch', 'Archaeology professor Indiana Jones ventures to seize a biblical artefact known as the Ark of the Covenant. While doing so, he puts up a fight against Renee and a troop of Nazis.', 'movie5.jpg', 'placeholder.jpg'),
+(6, 'Graphic', 'Ghostbusters', 'When Peter Venkman, Raymond Stantz and Egon Spengler lose their jobs as scientists, they start an establishment called Ghostbusters to fight the evil ghosts lurking in New York City.', 'movie6.jpg', 'placeholder.jpg'),
+(7, 'Graphic', 'Fight Club', 'Discontented with his capitalistic lifestyle, a white-collared insomniac forms an underground fight club with Tyler, a careless soap salesman. The project soon spirals down into something sinister.', 'movie7.jpg', 'placeholder.jpg'),
+(8, 'Graphic', 'Die Hard I', 'Hoping to spend Christmas with his estranged wife, detective John McClane arrives in LA. However, he learns about a hostage situation in an office building and his wife is one of the hostages.', 'movie8.jpg', 'placeholder.jpg'),
+(9, 'Graphic', 'Blade Runner', 'Rick Deckard, an ex-policeman, becomes a special agent with a mission to exterminate a group of violent androids. As he starts getting deeper into his mission, he questions his own identity.', 'movie9.jpg', 'placeholder.jpg'),
+(10, 'Graphic', 'The Shining', 'Jack and his family move into an isolated hotel with a violent past. Living in isolation, Jack begins to lose his sanity, which affects his family members.', 'movie10.jpg', 'placeholder.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
