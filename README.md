@@ -4,12 +4,12 @@
 # What's included in this repo?
 Course deliverables in this repo:
 
-1. Layout in PSD (at assets folder)
-2. web layout PSD and PDF (at assets folder).
-3. Dev notes.
-4. MySQL datababase of 10 movie placeholders.
-5. Data fetch and render view.
-6. Files and folders structured.
+1. Layout in PSD and PDF (at assets folder)
+5. Dev notes (Google Docs).
+2. MySQL datababase of 10 movie placeholders (at Main repo).
+3. Data fetch and render view (at Main repo).
+4. Files and folders structured (at Main repo).
+
 
 # Prototype: [Prototype](https://ruben741163.invisionapp.com/console/share/3M1XOUWYHT)
 # Dev notes: [Dev notes](https://docs.google.com/document/d/1JywtqlMeNHfK0AKIwHDUFA3nYBQM-E8Lm2lNwVU2c0g/)
