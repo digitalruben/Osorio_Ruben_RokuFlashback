@@ -12,7 +12,7 @@ Course deliverables in this repo:
 6. web layout.
 
 # Prototype: [Prototype](https://ruben741163.invisionapp.com/console/share/3M1XOUWYHT)
-# Dev notes: [Dev notes](https://docs.google.com/document/d/1ST_VoefA5jk7u4lU7tKrKzcldExtyX1Gkv9epnkSiv8)
+# Dev notes: [Dev notes](https://docs.google.com/document/d/1JywtqlMeNHfK0AKIwHDUFA3nYBQM-E8Lm2lNwVU2c0g/)
 
 ## Description
 The Flashback app is part of the Roku streaming service. Subscribers can use this app to
