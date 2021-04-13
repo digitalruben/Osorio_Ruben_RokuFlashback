@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+//server
 const port = process.env.PORT || 5050;
 
 app.use((req, res, next) => {
