@@ -16,9 +16,4 @@ router.get('/', (req, res) => {
     res.render('index', {message: "Hello from handlebars!"});
 })
 
-router.get('/portfolio', (req, res) => {
-    res.render('artwork', { portmessage: "Your are on the portfolio page"});
-})
-
 module.exports = router;
-
