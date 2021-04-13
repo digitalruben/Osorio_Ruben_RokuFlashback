@@ -6,7 +6,7 @@ const port = process.env.PORT || 5050;
 // this catches every route request - every time you change your location bar, this function reacts to it and intercepts the route request
 app.use((req, res, next) => {
     console.log('incoming request');
-    console.log(process.env.PORT);
+    console.log(port);
 
     // next is the original route request ie. /api/users
     next(); // => send the user to the route the requested
