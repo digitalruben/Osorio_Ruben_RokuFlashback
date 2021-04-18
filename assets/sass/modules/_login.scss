@@ -1,0 +1,77 @@
+#loginPage {
+  .loginWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .drawnBackground {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    bottom: 0;
+    z-index: 0;
+  }
+  header {
+    nav {
+      background: none;
+    }
+  }
+  .formArea {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+      font-size: 1.3em;
+      margin-bottom: 50px;
+      color: $white;
+    }
+    .inputField {
+      margin-bottom: 15px;
+      background: $white;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 10px;
+      border-radius: 8px;
+      input {
+        background: $white;
+        border: none;
+        outline: none;
+      }
+      img {
+        width: 30px;
+        background: $white;
+        padding-right: 10px;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      button {
+        padding: 10px 12px 10px 12px;
+        background: $rokupurple;
+        color: $white;
+        margin-bottom: 30px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.8s ease-out;
+        border-radius: 10px;
+      }
+      button:hover {
+        background: none;
+        background-color: $pink;
+        transition: all 0.8s ease-in;
+      }
+    }
+    a {
+      color: $white;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+  }
+}
