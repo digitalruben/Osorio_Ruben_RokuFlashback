@@ -1,0 +1,76 @@
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: arial, helvetica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p,
+li,
+a,
+span,
+button,
+input {
+  font-family: arial, helvetica, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+a,
+li,
+button {
+  text-decoration: none;
+  outline: none;
+}
+
+.bold {
+  font-family: arial, helvetica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container {
+  max-width: 100%;
+  background: $black;
+  z-index: -2;
+}
+
+.logo {
+  max-width: 120px;
+}
+
+.slide-enter-active,
+.slide-leave-actice {
+  transition: opacity 1s, transform 1s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(-5%);
+}

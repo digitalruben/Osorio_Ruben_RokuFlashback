@@ -1,0 +1,82 @@
+header {
+  nav {
+    padding: 8px 40px 8px 40px;
+    display: flex;
+    z-index: 8;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    position: fixed;
+    top: 0;
+    background-color: #662d91;
+    width: 100vw;
+    .rightWrapper {
+      display: inline-flex;
+      .profileWrapper {
+        display: inline-flex;
+        align-items: center;
+        padding-right: 10px;
+        img {
+          max-height: 40px;
+          padding-right: 10px;
+        }
+        h4 {
+          color: white;
+          font-weight: 300;
+          border: none;
+        }
+      }
+      button {
+        background: none;
+        border: none;
+        padding: 0px;
+        cursor: pointer;
+      }
+    }
+
+    a {
+      color: white;
+      font-weight: bold;
+    }
+  }
+  .settingsWrapper {
+    background-color: $black;
+    max-width: 500px;
+    padding: 50px 70px 50px 70px;
+    border-radius: 8px;
+    position: fixed;
+    right: 0;
+    top: 120px;
+    z-index: 8;
+    h3 {
+      color: $pink;
+      padding-bottom: 20px;
+      font-size: 1.2em;
+    }
+    li,
+    a {
+      color: $white;
+      padding-top: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.navDeco {
+  margin-bottom: -50px;
+  padding: 0px;
+  pointer-events: none;
+}
+
+.bottomDeco {
+  padding: 0px;
+  pointer-events: none;
+  filter: opacity(0.1);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  bottom: 0;
+  z-index: 0;
+}
