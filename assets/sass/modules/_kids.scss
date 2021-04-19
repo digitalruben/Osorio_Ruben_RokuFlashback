@@ -209,6 +209,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    width: 75%;
+    margin: 0 auto;
     .movie-item,
     .tv-item {
       display: flex;
@@ -255,6 +257,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    width: 75%;
+    margin: 0 auto;
     .music-item {
       display: flex;
       flex-direction: column;
