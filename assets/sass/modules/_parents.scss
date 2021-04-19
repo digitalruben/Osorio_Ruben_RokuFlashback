@@ -75,6 +75,8 @@
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: center;
+      width: 75%;
+      margin: 0 auto;
       .movie-item,
       .tv-item {
         display: flex;
@@ -170,7 +172,6 @@
       }
       img:hover {
         filter: brightness(0.5);
-
         transition: all 0.8s ease;
         transform: scale(1.1);
       }
@@ -333,8 +334,6 @@
     transition: all 0.3s ease-in;
   }
 }
-
-////////////////////////////////////////////////////// MUSIC SECTION ////////////////////////////////////////////////////////////
 
 .musicHighlight,
 .musicBox {
@@ -659,7 +658,6 @@
         .eraItem {
           img {
             width: 350px;
-            padding-right: 15px;
           }
         }
       }

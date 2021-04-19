@@ -14,7 +14,7 @@ export default {
             <img :src="'images/music/' + music.music_thumbnail" :alt="music.music_title"  @click="showAudioDetails()" class="item-image">
             <div class="titleBox"  @click="showAudioDetails()">
                 <h3> {{music.music_title}} </h3>
-                <h4> {{music.music_singer}} </h4>
+                
             </div>
             <div class="detailsBox musicBox" v-if="showdetails">
             

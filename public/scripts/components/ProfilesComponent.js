@@ -15,7 +15,7 @@ export default {
             <header-area :edit="edit" @pairData="getData" :whitelogo=purplelogo :settings=settings></header-area>
             <div class="profilesMain">
                 <div class="profilesWrapper">
-                <h2>Welcome again. Who want to use Roku today?</h2>
+                <h2>Welcome again to the Rokuniverse!</h2>
                 <div class="eachProfile">
                     <div id="parents">
                         <img :src="'images/' + current.parents_img" class="profileImage" :alt="current.user_parents" @click="toParents">

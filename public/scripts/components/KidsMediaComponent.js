@@ -12,7 +12,7 @@ export default {
         <section class="highlightArea" @click=playVideo()>
             <iframe :src="highlight.movies_media+'?playlist='+this.playlist+'&autoplay=1&mute=1&loop=1&controls=0'" width="100%" height="800px" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <img src="images/play_media.svg" alt="Play" @click="playVideo()" v-if="!playvideo">
-            <h3>Are you ready, Kids?<br>You better say "Aye, aye, Captain"!</h3>
+            <h3>Welcome kids!</h3>
         </section>
         <div  v-if="playvideo" class="mediaBox">
                     <button @click="closeVideo()"><img src="images/close.svg"></button>
@@ -38,7 +38,7 @@ export default {
                 </div>
             </section>
         </section>
-        <img src="images/bottom_pic.png" class="bottomDeco" draggable="false">
+        <img src="images/bottom.png" class="bottomDeco" draggable="false">
     </section>
     `,
 
