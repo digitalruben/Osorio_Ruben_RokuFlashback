@@ -1,13 +1,13 @@
-import Header from "./HeaderComponent.js";
-import MoviesThumbnails from "./KidsMoviesThumbnailsComponent.js";
-import TVThumbnails from "./KidsTVThumbnailsComponent.js";
-import MusicThumbnails from "./KidsMusicThumbnailsComponent.js";
+import Header from "./TheNavComponent.js";
+import MoviesThumbnails from "./TheKidsMoviesThumbsComponent.js";
+import TVThumbnails from "./TheKidsTvThumbsComponent.js";
+import MusicThumbnails from "./TheKidsMusicThumbsComponent.js";
 
 export default {
-    name: "KidsMedia",
+    name: "KidsPage",
 
     template: `
-    <section id="kidsMedia">
+    <section class="kidsMedia">
         <header-area :kids=kids :reachedhome=reachedhome @pairData="getData" :whitelogo=whitelogo></header-area>
         <section class="highlightArea" @click=playVideo()>
             <iframe :src="highlight.movies_media+'?playlist='+this.playlist+'&autoplay=1&mute=1&loop=1&controls=0'" width="100%" height="800px" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

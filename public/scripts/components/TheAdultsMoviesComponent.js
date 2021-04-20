@@ -1,13 +1,13 @@
-import Header from "./HeaderComponent.js";
-import Thumbnails from "./MoviesThumbnailsComponent.js";
+import Header from "./TheHeaderComponent.js";
+import Thumbnails from "./TheMoviesThumbsComponent.js";
 
 export default {
-    name: "ParentsMovies",
+    name: "AdultsMovies",
 
     template: `
-    <section id="parentsMovies">
+    <section class="adultsMovies">
 
-        <header-area :settings=settings :parents=parents :reachedhome=reachedhome @click="openMenu()" @pairData="getData" :whitelogo=whitelogo></header-area>
+        <header-area :settings=settings :adults=adults :reachedhome=reachedhome @click="openMenu()" @pairData="getData" :whitelogo=whitelogo></header-area>
         
         <section class="highlightArea" @click=playVideo()>
             <iframe :src="highlight.movies_media+'?playlist='+this.playlist+'&autoplay=1&mute=1&loop=1&controls=0'" width="100%" height="800px" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -22,10 +22,10 @@ export default {
 
         <!-- Filter fection -->
         <section class="filterSection">
-                <div class="eraItem" ><img src="images/login_background.jpg" alt="Filter Button" @click="eraone = false, eratwo = false, getEra()"><span>SHOW ALL</span></div>
-                <div class="eraItem" ><img src="images/login_background.jpg" alt="Filter Button" @click="eraone = true, eratwo = false, getEra()"><span>70s</span></div>
-                <div class="eraItem" ><img src="images/login_background.jpg" alt="Filter Button" @click="eraone = false, eratwo = true, getEra()"><span>80s</span></div>
-                <div class="eraItem" ><img src="images/login_background.jpg" alt="Filter Button" @click="eraone = false, eratwo = true, getEra()"><span>90s</span></div>
+                <div class="eraItem"><img src="images/login_background.jpg" alt="Filter Button" @click="seventies = false, eighties = false, nineties = false, getEra()"><span>SHOW ALL</span></div>
+                <div class="eraItem"><img src="images/login_background.jpg" alt="Filter Button" @click="seventies = true, eighties = true, nineties = true, getEra()"><span>70s</span></div>
+                <div class="eraItem"><img src="images/login_background.jpg" alt="Filter Button" @click="seventies = false, eighties = true, nineties = false, getEra()"><span>80s</span></div>
+                <div class="eraItem"><img src="images/login_background.jpg" alt="Filter Button" @click="seventies = false, eighties = false, nineties = true, getEra()"><span>90s</span></div>
         </section>
 
         <section class="mediaArea">
@@ -43,9 +43,10 @@ export default {
             allmovies: [],
             highlight: {},
             playlist: "",
-            eraone: false,
-            eratwo: false,
-            url: `/api/parents/movies`,
+            seventies: false,
+            eighties: false,
+            nineties: false,
+            url: `/api/adults/movies`,
             playvideo: false
         }
     },
@@ -54,7 +55,7 @@ export default {
         this.moviepage = true;
         this.reachedhome = true;
         this.whitelogo = true;
-        this.parents = true;
+        this.adults = true;
         this.settings = true;
 
         fetch(this.url)
@@ -74,13 +75,17 @@ export default {
         },
 
         getEra() {
-            if (this.eraone == true) {
-                this.url = `/api/parents/movies/eraone`;
-            }
-            else if (this.eratwo == true) {
-                this.url = `/api/parents/movies/eratwo`;
+            if (this.seventies == true) {
+                this.url = `/api/adults/movies/70s`;
+
+            } else if (this.eighties == true) {
+                this.url = `/api/adults/movies/80s`;
+
+            } else if (this.nineties == true) {
+                this.url = `/api/adults/movies/90s`;
+                
             } else {
-                this.url = `/api/parents/movies`;
+                this.url = `/api/adults/movies`;
             }
             fetch(this.url)
                 .then(res => res.json())
@@ -95,7 +100,7 @@ export default {
         },
         closeVideo() {
             this.playvideo = false;
-        }
+        },
     },
 
     components: {

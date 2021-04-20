@@ -1,25 +1,24 @@
 export default {
     name: "Header",
 
-    props: ["settings", "edit", "reachedhome", "parents", "kids", "purplelogo", "whitelogo"],
+    props: ["settings", "edit", "reachedhome", "adults", "kids", "whitelogo"],
 
     template: `
         <header>
             
             <nav>
-                <router-link to="/" v-if="purplelogo"><img src="images/roku.svg" class="logo" alt="Roku Logo"></router-link>
                 <router-link to="/" v-if="whitelogo"><img src="images/roku_white.svg" class="logo" alt="Roku Logo"></router-link >
-                <router-link to="/parents-movies">MOVIES</router-link>
-                <router-link to="/parents-tv">TV</router-link>
-                <router-link to="/parents-music">MUSIC</router-link>
+                <router-link to="/adultsmovies">MOVIES</router-link>
+                <router-link to="/adultstv">TV</router-link>
+                <router-link to="/adultsmusic">MUSIC</router-link>
                 
                 <div class="rightWrapper">
 
                     <div v-if="reachedhome">
 
                         <router-link to="/profiles"class="profileWrapper">
-                            <img :src="'images/' + current.parents_img" class="profileImage" :alt="current.user_parents" v-if="parents">
-                            <h4 v-if="parents">{{ current.user_parents }}</h4>
+                            <img :src="'images/' + current.adults_img" class="profileImage" :alt="current.user_adults" v-if="adults">
+                            <h4 v-if="adults">{{ current.user_adults }}</h4>
                         </router-link>
 
                         <router-link to="/profiles" class="profileWrapper">
@@ -35,7 +34,6 @@ export default {
             </nav>
 
             <div v-if="settingsmenu" class="settingsWrapper">
-                <h3>SETTINGS</h3>
                 <ul>
                     <li @click.prevent=signOut()>Sign Out</li>
                 </ul>
@@ -58,8 +56,8 @@ export default {
             this.$emit('pairData', this.current);
         }
 
-        if (this.current.parents_img == null) {
-            this.current.parents_img = "./placeholder.png";
+        if (this.current.adults_img == null) {
+            this.current.adults_img = "./placeholder.png";
         }
         if (this.current.kids_img == null) {
             this.current.kids_img = "placeholder.png";

@@ -1,5 +1,5 @@
-#parentsMovies,
-#parentsTV {
+.adultsMovies,
+.adultsTV {
   .highlightArea {
     cursor: pointer;
     iframe {
@@ -132,8 +132,7 @@
       }
       button {
         color: $white;
-        background: $pink-background;
-        background: $pink-background-gradient;
+        background: $rokupurple;
         padding: 8px 10px 8px 10px;
         font-size: 1.05em;
         border: none;
@@ -267,7 +266,7 @@
 
 .movieDetails,
 .tvDetails {
-  #mediaDetailsCover {
+  .mediaDetailsCover {
     position: absolute;
     border-radius: 0px;
     top: 55px;
@@ -278,14 +277,14 @@
     filter: brightness(0.5);
     cursor: pointer;
   }
-  #mediaDetailsPlayButton {
+  .mediaDetailsPlayButton {
     transition: all 0.8s ease;
     position: absolute;
     top: 50%;
     left: 50%;
     cursor: pointer;
   }
-  #mediaDetailsPlayButton:hover {
+  .mediaDetailsPlayButton:hover {
     transform: scale(1.2);
     transition: all 0.8s ease;
   }
@@ -353,8 +352,7 @@
     padding: 8px;
     max-height: 50px;
     cursor: pointer;
-    background: $pink-background;
-    background: $pink-background-gradient;
+    background: $rokupurple;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -432,7 +430,7 @@
   }
 }
 
-#parentsMusic {
+.adultsMusic {
   .mediaArea {
     .thumbnailsWrapper {
       display: flex;
@@ -509,8 +507,7 @@
       margin-bottom: 400px;
       top: 300px;
       position: relative;
-      background: $purple-background;
-      background: $purple-background-gradient;
+      background: $rokupurple;
       font-weight: 300;
       overflow-y: hidden;
     }
@@ -568,8 +565,7 @@
       }
       button {
         color: $white;
-        background: $pink-background;
-        background: $pink-background-gradient;
+        background: $rokupurple;
         padding: 8px 10px 8px 10px;
         font-size: 1.05em;
         border: none;
@@ -615,8 +611,8 @@
 }
 
 @media screen and (min-width: 800px) {
-  #parentsMovies,
-  #parentsTV {
+  .adultsMovies,
+  .adultsTV {
     .mediaArea {
       .thumbnailsWrapper {
         .movie-item,
@@ -650,7 +646,7 @@
     }
   }
 
-  #parentsMusic {
+  .adultsMusic {
     .filterSection {
       .musicEraWrapper {
         display: flex;

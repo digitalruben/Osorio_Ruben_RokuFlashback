@@ -1,12 +1,11 @@
-import Header from "./HeaderComponent.js";
+import Header from "./TheHeaderComponent.js";
 
 export default {
     name: "LoginPage",
 
     template: `
-        <section id="loginPage">
-            <img src="images/login_background.jpg" class="drawnBackground" draggable="false">
-            <header-area :whitelogo=purplelogo></header-area>
+        <section class="loginPage">
+            <img src="images/login_background.jpg" class="drawnBackground">
             <div class="loginWrapper">
                 <div class="formArea">
                     <h2>Sign In</h2>
@@ -21,8 +20,6 @@ export default {
                         </div>
                         <button @click.prevent="signIn()" type="submit" class="pinkButton">Sign In</button>
                     </form>
-                    <router-link to="">Forget Password?</router-link>
-                    <router-link to="">Don't have an account? Sign up</router-link>
                 </div>
             </div>
         </section>

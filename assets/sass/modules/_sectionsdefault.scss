@@ -1,12 +1,12 @@
+body {
+  background-color: $black;
+}
+
 img,
 embed,
 object,
 video {
   max-width: 100%;
-}
-
-html {
-  box-sizing: border-box;
 }
 
 *,
@@ -54,6 +54,10 @@ button {
   font-style: normal;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 100%;
   background: $black;
@@ -62,15 +66,4 @@ button {
 
 .logo {
   max-width: 120px;
-}
-
-.slide-enter-active,
-.slide-leave-actice {
-  transition: opacity 1s, transform 1s;
-}
-
-.slide-enter,
-.slide-leave-to {
-  opacity: 0;
-  transform: translateX(-5%);
 }

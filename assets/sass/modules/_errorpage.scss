@@ -1,0 +1,38 @@
+.errorPage {
+  .errorWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .errorArea {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+
+    h2 {
+      font-size: 3em;
+      max-width: 800px;
+      color: $white;
+      margin-bottom: 30px;
+    }
+    h4 {
+      font-size: 2em;
+      color: cyan;
+    }
+
+    a {
+      color: paleturquoise;
+    }
+  }
+
+  .drawnBackground {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
