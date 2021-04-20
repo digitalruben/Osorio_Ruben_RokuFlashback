@@ -1,4 +1,4 @@
-import router from "./components/Router.js";
+import router from "./components/TheRouterComponent.js";
 
 (() => {
     const vm = new Vue({

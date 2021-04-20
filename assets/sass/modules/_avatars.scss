@@ -1,0 +1,73 @@
+.profilesPage {
+  .profilesMain {
+    display: flex;
+    justify-content: center;
+
+    .profilesWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      top: 40%;
+
+      h2 {
+        color: $white;
+        margin: 0 auto;
+        font-size: 1.5em;
+        margin-bottom: 30px;
+      }
+
+      .eachProfile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        h3,
+        h4 {
+          text-align: center;
+          color: $white;
+        }
+
+        h4 {
+          font-weight: $light;
+          margin-bottom: 5px;
+        }
+
+        h3 {
+          cursor: pointer;
+        }
+
+        img {
+          max-height: 120px;
+          cursor: pointer;
+          margin-bottom: 30px;
+          padding: 3px;
+          border-radius: 120px;
+          margin: 15px;
+          transition: all 0.8s ease;
+        }
+
+        img:hover {
+          filter: brightness(0.5);
+          transition: all 0.8s ease;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .drawnBackground {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  header {
+    nav {
+      background: none;
+    }
+  }
+}

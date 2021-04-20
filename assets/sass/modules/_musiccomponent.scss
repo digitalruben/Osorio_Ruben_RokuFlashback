@@ -16,8 +16,7 @@
     padding: 8px;
     max-height: 50px;
     cursor: pointer;
-    background: $pink-background;
-    background: $pink-background-gradient;
+    background: $rokupurple;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -97,7 +96,7 @@
   }
 }
 
-#parentsMusic {
+.adultsMusic {
   .mediaArea {
     .thumbnailsWrapper {
       display: flex;
@@ -183,8 +182,7 @@
       margin-bottom: 400px;
       top: 300px;
       position: relative;
-      background: $purple-background;
-      background: $purple-background-gradient;
+      background: $rokupurple;
       font-weight: 300;
       overflow-y: hidden;
     }
@@ -245,8 +243,7 @@
       }
       button {
         color: $white;
-        background: $pink-background;
-        background: $pink-background-gradient;
+        background: $rokupurple;
         padding: 8px 10px 8px 10px;
         font-size: 1.05em;
         border: none;
@@ -297,8 +294,8 @@
 }
 
 @media screen and (min-width: 800px) {
-  #parentsMovies,
-  #parentsTV {
+  .adultsMovies,
+  .adultsTV {
     .mediaArea {
       .thumbnailsWrapper {
         .movie-item,
@@ -332,7 +329,7 @@
     }
   }
 
-  #parentsMusic {
+  .adultsMusic {
     .filterSection {
       .musicEraWrapper {
         display: flex;

@@ -1,7 +1,7 @@
 export default {
-    name: "Thumbnails",
+    name: "KidsMoviesThumbs",
 
-    props: ["movie", "moviepage", "tv", "tvpage", "music", "musicpage", "kidsmedia", "kidspage"],
+    props: ["movie"],
 
     data() {
         return {
@@ -11,16 +11,14 @@ export default {
     },
 
     template: `
-        <section class="movie-item" v-if="moviepage">
+        <section class="movie-item">
             <img :src="'images/movies/' + movie.movies_thumbnail" :alt="movie.movies_title"  @click="showVideoDetails()" class="item-image">
-            <div class="titleBox"  @click="showVideoDetails()">
-                <h3> {{movie.movies_title}} </h3>
-            </div>
+
             <div class="detailsBox movieBox" v-if="showdetails">
             <button @click="closeVideoDetails()" v-if="!playvideo"><img src="images/arrow.svg"><span>BACK</span></button>
                 <div class="movieDetails">
-                    <img :src="'images/movies/' + movie.movies_cover" :alt="movie.movies_title" @click="playVideo()" v-if="!playvideo" id="mediaDetailsCover" draggable="false">
-                    <img src="images/play_media.svg" alt="Play" @click="playVideo()" v-if="!playvideo" id="mediaDetailsPlayButton">
+                    <img :src="'images/movies/' + movie.movies_cover" :alt="movie.movies_title" @click="playVideo()" v-if="!playvideo" class="mediaDetailsCover" draggable="false">
+                    <img src="images/play_media.svg" alt="Play" @click="playVideo()" v-if="!playvideo" class="mediaDetailsPlayButton">
                 <div  v-if="playvideo" class="mediaBox">
                     <button @click="closeVideo()"><img src="images/close.svg"></button>
                     <iframe :src="movie.movies_media+'?rel=0&autoplay=1'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
@@ -29,7 +27,7 @@ export default {
                         <h3> {{movie.movies_title}}</h3>
                         <h5> {{movie.movies_runtime}}</h5>
                         <div class="ratingMedia">
-                            <h4> Rating: {{ movie.movies_rating }}</h4>
+                            <h4>Rating: {{ movie.movies_rating }}</h4>
                         </div>
                         <div class="mediaContent">
                             <h4> {{movie.movies_genre}}</h4>
