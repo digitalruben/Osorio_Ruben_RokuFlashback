@@ -2,6 +2,7 @@
 .adultsTV {
   .highlightArea {
     cursor: pointer;
+
     iframe {
       position: absolute;
       top: 0;
@@ -9,6 +10,7 @@
       z-index: 1;
       filter: brightness(0.5);
     }
+
     h3 {
       color: $white;
       font-size: 1.3em;
@@ -22,12 +24,14 @@
       font-weight: 300;
       overflow-y: hidden;
     }
+
     img {
       z-index: 5;
       position: absolute;
       left: 50%;
       transition: all 0.8s ease;
     }
+
     img:hover {
       transform: scale(1.2);
       transition: all 0.8s ease;
@@ -85,7 +89,6 @@
         .item-image {
           overflow: hidden;
           object-fit: contain;
-          border-radius: 10px;
           cursor: pointer;
         }
         .titleBox {
@@ -221,6 +224,7 @@
       background-color: $pink;
       transition: all 0.3s ease-in;
     }
+
     .infoBox {
       width: 45%;
       position: absolute;
@@ -266,7 +270,7 @@
 
 .movieDetails,
 .tvDetails {
-  .mediaDetailsCover {
+  #mediaDetailsCover {
     position: absolute;
     border-radius: 0px;
     top: 55px;
@@ -444,7 +448,6 @@
         .item-image {
           overflow: hidden;
           object-fit: contain;
-          border-radius: 10px;
           max-height: 300px;
           cursor: pointer;
         }
@@ -641,6 +644,7 @@
         }
         h3 {
           font-size: 1.5em;
+          color: $rokusubtitle;
         }
       }
     }

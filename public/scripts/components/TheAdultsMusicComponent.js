@@ -7,8 +7,10 @@ export default {
 
     template: `
     <section class="adultsMusic">
+        
         <header-area :settings=settings :adults=adults :reachedhome=reachedhome @click="openMenu()" @pairData="getData" :whitelogo=whitelogo></header-area>
         
+        <!-- Decades filtering/selection coming from the API-->
         <section class="filterSection">
             <div class="musicEraWrapper">
                 <div class="eraItem" ><img src="images/profile_background.jpg" alt="Filter Button" @click="seventies = false, eighties = false, nineties = false, getEra()"><span>ALL</span></div>
