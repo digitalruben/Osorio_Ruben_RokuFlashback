@@ -14,7 +14,7 @@ export default {
 
             <img src="images/users_bg.jpg" class="drawnBackground" draggable="false">
 
-            <header-area :kids=kids :reachedhome=reachedhome @pairData="getData" :whitelogo=whitelogo></header-area>
+            <header-area @pairData="getData"></header-area>
             
             <div class="profilesMain">
                 <div class="profilesWrapper">
@@ -45,8 +45,6 @@ export default {
 
     created: function () {
         this.settings = true;
-        this.edit = true;
-        this.purplelogo = true;
     },
 
     methods: {

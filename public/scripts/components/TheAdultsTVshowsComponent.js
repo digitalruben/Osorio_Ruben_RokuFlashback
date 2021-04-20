@@ -9,24 +9,25 @@ export default {
 
         <header-area :settings=settings :adults=adults :reachedhome=reachedhome @click="openMenu()" @pairData="getData" :whitelogo=whitelogo></header-area>
         
+        <!-- Lightbox-->
         <section class="highlightArea" @click=playVideo()>
             <iframe :src="highlight.tv_media+'?playlist='+this.playlist+'&autoplay=1&mute=1&loop=1&controls=0'" width="100%" height="800px" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <img src="images/play_media.svg" alt="Play" @click="playVideo()" v-if="!playvideo">
             <h3>Welcome again to Roku TV Flashback<br>Watch the new releases of the week<br>And enjoy at home</h3>
         </section>
 
-        <div  v-if="playvideo" class="mediaBox">
-                    <button @click="closeVideo()"><img src="images/close.svg"></button>
-                    <iframe :src="highlight.tv_media+'?rel=0&autoplay=1'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div v-if="playvideo" class="mediaBox">
+            <button @click="closeVideo()"><img src="images/close.svg"></button>
+            <iframe :src="highlight.tv_media+'?rel=0&autoplay=1'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         </div>
 
+        <!-- Decades filtering/selection coming from the API-->
         <section class="filterSection">
                 <div class="eraItem"><img src="images/login_background.jpg" alt="Filter Button" @click="seventies = false, eighties = false, nineties = false, getEra()"><span>SHOW ALL</span></div>
                 <div class="eraItem"><img src="images/login_background.jpg" alt="Filter Button" @click="seventies = true, eighties = true, nineties = true, getEra()"><span>70s</span></div>
                 <div class="eraItem"><img src="images/login_background.jpg" alt="Filter Button" @click="seventies = false, eighties = true, nineties = false, getEra()"><span>80s</span></div>
                 <div class="eraItem"><img src="images/login_background.jpg" alt="Filter Button" @click="seventies = false, eighties = false, nineties = true, getEra()"><span>90s</span></div>                               
         </section>
-
 
         <section class="mediaArea">
             <div class="thumbnailsWrapper">
@@ -65,7 +66,6 @@ export default {
                 this.playlist = this.highlight.tv_media.split("embed/").pop();
             })
             .catch((err) => console.error(err));
-
     },
 
     methods: {

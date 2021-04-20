@@ -1,5 +1,5 @@
 export default {
-    name: "Header",
+    name: "HeaderComponent",
 
     props: ["settings", "edit", "reachedhome", "adults", "kids", "whitelogo"],
 

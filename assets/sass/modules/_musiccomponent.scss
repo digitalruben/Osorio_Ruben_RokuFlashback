@@ -108,7 +108,7 @@
       .music-item {
         display: flex;
         flex-direction: column;
-        padding: 15px;
+        padding: 25px;
 
         img:hover {
           filter: none;
@@ -119,8 +119,9 @@
         .item-image {
           overflow: hidden;
           object-fit: contain;
-          border-radius: 10px;
-          max-height: 300px;
+          border-radius: 50%;
+          border: $white solid 2px;
+          max-height: 260px;
           cursor: pointer;
         }
         .titleBox {
@@ -134,6 +135,8 @@
           h3 {
             color: $white;
             font-weight: $light;
+            margin: 0 auto;
+            text-align: center;
           }
           h4 {
             color: $rokupurple;

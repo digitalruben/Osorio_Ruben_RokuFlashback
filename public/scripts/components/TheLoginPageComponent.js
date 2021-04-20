@@ -9,17 +9,20 @@ export default {
             <div class="loginWrapper">
                 <div class="formArea">
                     <h2>Sign In</h2>
+
                     <form>
                         <div class="inputField">
                             <img src="images/user.svg" alt="Username Icon">
                             <input v-model="input.username" type="text" placeholder="Username" required>
                         </div>
+                        
                         <div class="inputField">
                             <img src="images/lock.svg" alt="Password Icon">
                             <input v-model="input.password" type="password" placeholder="Password" required>
                         </div>
                         <button @click.prevent="signIn()" type="submit" class="pinkButton">Sign In</button>
                     </form>
+
                 </div>
             </div>
         </section>
