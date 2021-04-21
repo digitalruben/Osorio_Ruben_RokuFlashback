@@ -5,7 +5,7 @@ export default {
 
     data() {
         return {
-            showdetails: false,
+            showInfo: false,
         }
     },
 
@@ -13,10 +13,10 @@ export default {
         <section class="music-item">
 
             <!--Media thumbnails -->
-            <img :src="'images/music/' + music.music_thumbnail" :alt="music.music_title"  @click="showAudioDetails()" class="item-image">
+            <img :src="'images/music/' + music.music_thumbnail" :alt="music.music_title"  @click="showAudio()" class="item-image">
 
             <!--Audio player-->
-            <div class="detailsBox musicBox" v-if="showdetails">
+            <div class="detailsBox musicBox" v-if="showInfo">
 
                 <div class="musicPlayerArea">
 
@@ -42,11 +42,11 @@ export default {
     `,
 
     methods: {
-        showAudioDetails() {
-            this.showdetails = true;
+        showAudio() {
+            this.showInfo = true;
         },
         closeAudioDetails() {
-            this.showdetails = false;
+            this.showInfo = false;
         },
         playAudio() {
             console.log(this.music.music_title);

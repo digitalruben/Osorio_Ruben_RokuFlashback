@@ -1,6 +1,6 @@
 .adultsMovies,
 .adultsTV {
-  .highlightArea {
+  .lightboxArea {
     cursor: pointer;
 
     iframe {
@@ -40,22 +40,27 @@
 
   .menuNav {
     padding: 30px;
+
     ul {
       display: flex;
+
       li {
         padding-right: 10vw;
+
         a {
           text-decoration: none;
           font-size: 1.4em;
           color: $white;
           transition: all 0.5s ease;
         }
+
         a:hover {
           color: $rokupurple;
           transition: all 0.5s ease;
         }
       }
     }
+
     .currentPage {
       display: flex;
       flex-direction: column;
@@ -63,10 +68,12 @@
       justify-content: center;
       align-items: center;
       margin-top: -20px;
+
       a {
         color: $yellow;
         padding-top: 10px;
       }
+
       img {
         max-height: 10px;
         padding: 0px;
@@ -81,16 +88,19 @@
       justify-content: center;
       width: 75%;
       margin: 0 auto;
+
       .movie-item,
       .tv-item {
         display: flex;
         flex-direction: column;
         padding: 15px;
+
         .item-image {
           overflow: hidden;
           object-fit: contain;
           cursor: pointer;
         }
+
         .titleBox {
           display: flex;
           flex-wrap: wrap;
@@ -98,17 +108,21 @@
           padding-top: 15px;
           padding-bottom: 15px;
           cursor: pointer;
+
           span {
             color: $rokusubtitle;
           }
+
           img {
             max-height: 15px;
             padding-left: 10px;
           }
+
           h3 {
             color: $rokupurple;
             font-weight: $light;
           }
+
           h4 {
             color: $rokupurple;
             font-weight: $light;
@@ -117,6 +131,7 @@
       }
     }
   }
+
   .filterSection {
     padding: 30px;
     display: flex;
@@ -127,12 +142,14 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+
       h3 {
         color: $white;
         font-size: 1.4em;
         font-weight: $light;
         padding-right: 15px;
       }
+
       button {
         color: $white;
         background: $rokupurple;
@@ -150,7 +167,8 @@
         transition: all 0.3s ease-in;
       }
     }
-    .eraItem {
+
+    .filter {
       text-align: center;
       color: $white;
       display: flex;
@@ -162,6 +180,7 @@
       height: 130px;
       border: solid $rokupurple 1px;
       border-radius: 10px;
+
       img {
         object-fit: cover;
         border-radius: 10px;
@@ -172,11 +191,13 @@
         filter: brightness(0.2);
         transition: all 0.8s ease;
       }
+
       img:hover {
         filter: brightness(0.5);
         transition: all 0.8s ease;
         transform: scale(1.1);
       }
+
       span {
         position: absolute;
         pointer-events: none;
@@ -185,6 +206,7 @@
       }
     }
   }
+
   .detailsBox {
     position: fixed;
     background-color: $black;
@@ -194,6 +216,7 @@
     bottom: 0;
     z-index: 5;
     padding-top: 200px;
+
     button {
       display: flex;
       align-items: center;
@@ -209,16 +232,19 @@
       left: 39px;
       font-size: 1.05em;
       transition: all 0.3s ease-in;
+
       img {
         height: 20px;
         padding-right: 5px;
       }
+
       span {
         color: $white;
         padding-right: 10px;
         padding-left: 10px;
       }
     }
+
     button:hover {
       background: none;
       background-color: $pink;
@@ -228,13 +254,12 @@
     .infoBox {
       width: 45%;
       position: absolute;
-
       padding-left: 55px;
-
       margin-top: 200px;
       line-height: 1.1em;
       display: flex;
       flex-wrap: wrap;
+
       .ratingMedia {
         display: flex;
         padding-left: 10px;
@@ -244,22 +269,26 @@
           padding-right: 5px;
         }
       }
+
       h3 {
         color: $white;
         font-size: 1.5em;
         padding-bottom: 15px;
         padding-right: 10px;
       }
+
       h4 {
         color: $rokusubtitle;
         font-weight: $light;
         padding-bottom: 10px;
       }
+
       h5 {
         font-weight: $light;
         color: $gray;
         padding-bottom: 10px;
       }
+
       p {
         color: $white;
         padding-bottom: 10px;
@@ -281,6 +310,7 @@
     filter: brightness(0.5);
     cursor: pointer;
   }
+
   .mediaDetailsPlayButton {
     transition: all 0.8s ease;
     position: absolute;
@@ -288,6 +318,7 @@
     left: 50%;
     cursor: pointer;
   }
+
   .mediaDetailsPlayButton:hover {
     transform: scale(1.2);
     transition: all 0.8s ease;
@@ -303,6 +334,7 @@
   left: 0;
   bottom: 0;
   z-index: 5;
+
   iframe {
     position: fixed;
     width: 100%;
@@ -310,6 +342,7 @@
     bottom: 0;
     left: 0;
   }
+
   button {
     display: flex;
     align-items: center;
@@ -331,6 +364,7 @@
       padding-right: 5px;
     }
   }
+
   button:hover {
     background: none;
     background-color: $pink;
@@ -349,7 +383,7 @@
   z-index: 5;
   width: 100%;
   height: 100%;
-  //background-color: $black;
+
   button {
     display: flex;
     align-items: center;
@@ -365,21 +399,25 @@
     left: 1%;
     font-size: 1.05em;
     transition: all 0.3s ease-in;
+
     img {
       height: 20px;
       padding-right: 5px;
     }
+
     span {
       color: $white;
       padding-right: 10px;
       padding-left: 10px;
     }
   }
+
   button:hover {
     background: none;
     background-color: $pink;
     transition: all 0.3s ease-in;
   }
+
   .musicPlayerArea {
     display: flex;
     position: absolute;
@@ -391,6 +429,7 @@
     right: 10%;
     top: 20%;
     z-index: 6;
+
     img {
       max-height: 300px;
       max-width: 300px;
@@ -399,16 +438,19 @@
       margin-bottom: 30px;
     }
   }
+
   .infoBox {
     position: absolute;
     bottom: 0;
     width: 100%;
     padding-left: 30px;
+
     .likeBox {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       padding-bottom: 30px;
+
       h4 {
         font-size: 1em;
         font-weight: $light;
@@ -416,16 +458,19 @@
         padding-top: 15px;
       }
     }
+
     h4 {
       color: $white;
       font-size: 1.5em;
       padding-bottom: 15px;
     }
+
     h6 {
       color: $rokupurple;
       padding-bottom: 15px;
       font-weight: $light;
     }
+
     h5 {
       color: $gray;
       padding-bottom: 15px;
@@ -441,16 +486,19 @@
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: center;
+
       .music-item {
         display: flex;
         flex-direction: column;
         padding: 15px;
+
         .item-image {
           overflow: hidden;
           object-fit: contain;
           max-height: 300px;
           cursor: pointer;
         }
+
         .titleBox {
           display: flex;
           flex-wrap: wrap;
@@ -459,10 +507,12 @@
           padding-bottom: 15px;
           cursor: pointer;
           max-width: 300px;
+
           h3 {
             color: $white;
             font-weight: $light;
           }
+
           h4 {
             color: $rokupurple;
             font-weight: $light;
@@ -472,7 +522,7 @@
     }
   }
 
-  .highlightArea {
+  .lightboxArea {
     .highlightWrapper {
       display: flex;
       position: absolute;
@@ -483,7 +533,8 @@
       left: 10%;
       right: 10%;
       z-index: 5;
-      .highlightThumbnail {
+
+      .lightboxThumb {
         padding-right: 10px;
         img {
           max-height: 350px;
@@ -492,6 +543,7 @@
           filter: blur(2px) brightness(0.5);
           transition: all 0.8s ease;
         }
+
         img:hover {
           filter: none;
           transform: scale(1.1);
@@ -518,12 +570,16 @@
 
   .menuNav {
     padding-left: 30px;
+
     ul {
       display: flex;
+
       li {
         padding-right: 10vw;
+
         a {
           text-decoration: none;
+
           font-size: 1.4em;
           color: $white;
           transition: all 0.5s ease;
@@ -534,6 +590,7 @@
         }
       }
     }
+
     .currentPage {
       display: flex;
       flex-direction: column;
@@ -541,16 +598,19 @@
       justify-content: center;
       align-items: center;
       margin-top: -20px;
+
       a {
         color: $yellow;
         padding-top: 10px;
       }
+
       img {
         max-height: 10px;
         padding: 0px;
       }
     }
   }
+
   .filterSection {
     padding: 30px;
     display: flex;
@@ -560,12 +620,14 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+
       h3 {
         color: $white;
         font-size: 1.4em;
         font-weight: $light;
         padding-right: 15px;
       }
+
       button {
         color: $white;
         background: $rokupurple;
@@ -577,13 +639,15 @@
         width: 120px;
         transition: all 0.3s ease-out;
       }
+
       button:hover {
         background: none;
         background-color: $pink;
         transition: all 0.3s ease-in;
       }
     }
-    .eraItem {
+
+    .filter {
       text-align: center;
       color: $white;
       display: flex;
@@ -591,6 +655,7 @@
       flex-direction: column;
       align-items: center;
       margin-top: 15px;
+
       img {
         object-fit: cover;
         border-radius: 10px;
@@ -600,10 +665,12 @@
         filter: brightness(0.5);
         transition: all 0.8s ease;
       }
+
       img:hover {
         filter: brightness(0.2);
         transition: all 0.8s ease;
       }
+
       span {
         position: absolute;
         pointer-events: none;
@@ -628,7 +695,7 @@
     }
 
     .filterSection {
-      .eraItem {
+      .filter {
         img {
           width: 750px;
           height: 250px;
@@ -642,6 +709,7 @@
         .ratingMedia {
           padding-left: 0px;
         }
+
         h3 {
           font-size: 1.5em;
           color: $rokusubtitle;
@@ -652,19 +720,19 @@
 
   .adultsMusic {
     .filterSection {
-      .musicEraWrapper {
+      .filtersCont {
         display: flex;
 
-        .eraItem {
+        .filter {
           img {
             width: 350px;
           }
         }
       }
     }
-    .highlightArea {
+    .lightboxArea {
       .highlightWrapper {
-        .highlightThumbnail {
+        .lightboxThumb {
           padding-right: 20px;
         }
       }

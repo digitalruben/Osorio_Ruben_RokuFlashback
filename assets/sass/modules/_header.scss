@@ -11,12 +11,15 @@ header {
     top: 0;
     background-color: #662d91;
     width: 100vw;
+
     .rightWrapper {
       display: inline-flex;
+
       .profileWrapper {
         display: inline-flex;
         align-items: center;
         padding-right: 40px;
+
         img {
           max-height: 40px;
           padding-right: 10px;
@@ -48,11 +51,13 @@ header {
     right: 0;
     top: 60px;
     z-index: 8;
+
     h3 {
       color: $pink;
       padding-bottom: 20px;
       font-size: 1.2em;
     }
+
     li,
     a {
       color: $white;

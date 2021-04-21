@@ -67,3 +67,12 @@ html {
 .logo {
   max-width: 120px;
 }
+
+.mainbg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  bottom: 0;
+  z-index: 0;
+}

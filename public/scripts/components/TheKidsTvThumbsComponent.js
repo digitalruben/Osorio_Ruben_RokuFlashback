@@ -5,7 +5,7 @@ export default {
 
     data() {
         return {
-            showdetails: false,
+            showInfo: false,
             playvideo: false
         }
     },
@@ -14,16 +14,16 @@ export default {
         <section class="tv-item">
 
             <!--Media thumbnails -->
-            <img :src="'images/tv/' + tv.tv_thumbnail" :alt="tv.tv_title"  @click="showVideoDetails()" class="item-image">
+            <img :src="'images/tv/' + tv.tv_thumbnail" :alt="tv.tv_title"  @click="showVideoInfo()" class="item-image">
 
-            <div class="detailsBox tvBox" v-if="showdetails">
+            <div class="detailsBox tvBox" v-if="showInfo">
                 <button @click="closeVideoDetails()" v-if="!playvideo"><img src="images/arrow.svg"><span>BACK</span></button>
                         
                 <!--Player cover image and content information-->
                 <div class="tvDetails">
 
                         <img :src="'images/tv/' + tv.tv_cover" :alt="tv.tv_title" @click="playVideo()" v-if="!playvideo" id="mediaDetailsCover" draggable="false">
-                        <img src="images/play_media.svg" alt="Play" @click="playVideo()" v-if="!playvideo" class="mediaDetailsPlayButton">
+                        <img src="images/play.svg" alt="Play" @click="playVideo()" v-if="!playvideo" class="mediaDetailsPlayButton">
                     
                     <div  v-if="playvideo" class="mediaBox">
 
@@ -49,11 +49,11 @@ export default {
     `,
 
     methods: {
-        showVideoDetails() {
-            this.showdetails = true;
+        showVideoInfo() {
+            this.showInfo = true;
         },
         closeVideoDetails() {
-            this.showdetails = false;
+            this.showInfo = false;
         },
         playVideo() {
             this.playvideo = true;

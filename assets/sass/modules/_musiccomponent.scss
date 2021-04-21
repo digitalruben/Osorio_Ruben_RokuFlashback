@@ -147,7 +147,7 @@
     }
   }
 
-  .highlightArea {
+  .lightboxArea {
     .highlightWrapper {
       display: flex;
       position: absolute;
@@ -158,7 +158,7 @@
       left: 10%;
       right: 10%;
       z-index: 5;
-      .highlightThumbnail {
+      .lightboxThumb {
         padding-right: 10px;
         img {
           max-height: 350px;
@@ -261,7 +261,7 @@
         transition: all 0.3s ease-in;
       }
     }
-    .eraItem {
+    .filter {
       text-align: center;
       color: $white;
       display: flex;
@@ -311,7 +311,7 @@
     }
 
     .filterSection {
-      .eraItem {
+      .filter {
         img {
           width: 750px;
           height: 250px;
@@ -334,10 +334,10 @@
 
   .adultsMusic {
     .filterSection {
-      .musicEraWrapper {
+      .filtersCont {
         display: flex;
 
-        .eraItem {
+        .filter {
           img {
             width: 350px;
             filter: brightness(0.2);
@@ -352,9 +352,9 @@
         }
       }
     }
-    .highlightArea {
+    .lightboxArea {
       .highlightWrapper {
-        .highlightThumbnail {
+        .lightboxThumb {
           padding-right: 20px;
         }
       }

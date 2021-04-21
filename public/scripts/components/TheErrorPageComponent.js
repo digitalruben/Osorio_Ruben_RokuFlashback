@@ -3,7 +3,7 @@ export default {
 
     template: `
         <section class="errorPage">
-            <img src="images/login_background.jpg" class="drawnBackground">
+            <img src="images/login_background.jpg" class="mainbg">
             <div class="errorWrapper">
                 <div class="errorArea">
                     <h2>Sorry. Page not found.</h2>

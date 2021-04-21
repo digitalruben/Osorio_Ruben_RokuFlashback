@@ -5,7 +5,7 @@ export default {
 
     data() {
         return {
-            showdetails: false,
+            showInfo: false,
             playvideo: false
         }
     },
@@ -14,13 +14,13 @@ export default {
         <section class="movie-item" v-if="moviepage">
 
             <!--Media thumbnails -->
-            <img :src="'images/movies/' + movie.movies_thumbnail" :alt="movie.movies_title" @click="showVideoDetails()" class="item-image">
+            <img :src="'images/movies/' + movie.movies_thumbnail" :alt="movie.movies_title" @click="showVideoInfo()" class="item-image">
             
-            <div class="titleBox"  @click="showVideoDetails()">
+            <div class="titleBox"  @click="showVideoInfo()">
                 <h3> {{ movie.movies_title }} </h3>
             </div>
             
-            <div class="detailsBox movieBox" v-if="showdetails">
+            <div class="detailsBox movieBox" v-if="showInfo">
 
                 <button @click="closeVideoDetails()" v-if="!playvideo"><img src="images/arrow.svg"><span>BACK</span></button>
             
@@ -28,7 +28,7 @@ export default {
                 <div class="movieDetails">
 
                     <img :src="'images/movies/' + movie.movies_cover" :alt="movie.movies_title" @click="playVideo()" v-if="!playvideo" id="mediaDetailsCover" draggable="false">
-                    <img src="images/play_media.svg" alt="Play" @click="playVideo()" v-if="!playvideo" class="mediaDetailsPlayButton">
+                    <img src="images/play.svg" alt="Play" @click="playVideo()" v-if="!playvideo" class="mediaDetailsPlayButton">
 
                     <div v-if="playvideo" class="mediaBox">
 
@@ -57,11 +57,11 @@ export default {
     `,
 
     methods: {
-        showVideoDetails() {
-            this.showdetails = true;
+        showVideoInfo() {
+            this.showInfo = true;
         },
         closeVideoDetails() {
-            this.showdetails = false;
+            this.showInfo = false;
         },
         playVideo() {
             this.playvideo = true;

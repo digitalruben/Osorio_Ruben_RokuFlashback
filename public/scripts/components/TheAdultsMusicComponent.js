@@ -1,5 +1,5 @@
 import Header from "./TheHeaderComponent.js";
-import MusicHighlight from "./TheMusicLightboxComponent.js";
+import MusicLightbox from "./TheMusicLightboxComponent.js";
 import Thumbnails from "./TheMusicThumbsComponent.js";
 
 export default {
@@ -8,24 +8,22 @@ export default {
     template: `
     <section class="adultsMusic">
         
-        <header-area :settings=settings :adults=adults :reachedhome=reachedhome @click="openMenu()" @pairData="getData" :whitelogo=whitelogo></header-area>
+        <header-area :settings=settings :adults=adults :reachedhome=reachedhome @click="openMenu()" @pairData="getData"></header-area>
         
-        <!-- Decades filtering/selection coming from the API-->
+        <!-- Decades filtering/selection coming from the API -->
         <section class="filterSection">
-            <div class="musicEraWrapper">
-                <div class="eraItem" ><img src="images/profile_background.jpg" alt="Filter Button" @click="seventies = false, eighties = false, nineties = false, getEra()"><span>ALL</span></div>
-                <div class="eraItem" ><img src="images/profile_background.jpg" alt="Filter Button" @click="seventies = true, eighties = false, nineties = false, getEra()"><span>70s</span></div>
-                <div class="eraItem" ><img src="images/profile_background.jpg" alt="Filter Button" @click="seventies = false, eighties = true, nineties = false, getEra()"><span>80s</span></div>
-                <div class="eraItem" ><img src="images/profile_background.jpg" alt="Filter Button" @click="seventies = false, eighties = false, nineties = true, getEra()"><span>90s</span></div>
+            <div class="filtersCont">
+                <div class="filter" ><img src="images/btn.jpg" alt="Filter Button" @click="seventies = false, eighties = false, nineties = false, getResults()"><span>ALL</span></div>
+                <div class="filter" ><img src="images/btn.jpg" alt="Filter Button" @click="seventies = true, eighties = false, nineties = false, getResults()"><span>70s</span></div>
+                <div class="filter" ><img src="images/btn.jpg" alt="Filter Button" @click="seventies = false, eighties = true, nineties = false, getResults()"><span>80s</span></div>
+                <div class="filter" ><img src="images/btn.jpg" alt="Filter Button" @click="seventies = false, eighties = false, nineties = true, getResults()"><span>90s</span></div>
             </div>
         </section>
 
         <section class="mediaArea">
-    
                 <div class="thumbnailsWrapper">
                     <load-thumbnail v-for="music in allmusic" :music=music :key=music.music_id :musicpage=musicpage></load-thumbnail>
                 </div>
-
         </section>
 
     </section>
@@ -36,20 +34,19 @@ export default {
             current: {},
             allmusic: [],
             highlights: [],
+            url: `/api/adults/music`,
             seventies: false,
             eighties: false,
             nineties: false,
-            url: `/api/adults/music`,
-            showdetails: false,
+            showInfo: false,
         }
     },
 
     created: function () {
+        this.adults = true;
+        this.settings = true;        
         this.musicpage = true;
         this.reachedhome = true;
-        this.whitelogo = true;
-        this.adults = true;
-        this.settings = true;
 
         fetch(this.url)
             .then(res => res.json())
@@ -67,7 +64,7 @@ export default {
             this.current = data;
         },
 
-        getEra() {
+        getResults() {
             if (this.seventies == true) {
                 this.url = `/api/adults/music/70s`;
             } else if (this.eighties == true) {
@@ -90,6 +87,6 @@ export default {
     components: {
         "header-area": Header,
         "load-thumbnail": Thumbnails,
-        "music-highlight": MusicHighlight,
+        "music-lightbox": MusicLightbox,
     }
 }
