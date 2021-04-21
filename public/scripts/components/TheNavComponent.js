@@ -1,13 +1,13 @@
 export default {
     name: "NavComponent",
 
-    props: ["settings", "edit", "reachedhome", "adults", "kids", "whitelogo"],
+    props: ["settings", "edit", "reachedhome", "adults", "kids"],
 
     template: `
         <header>
             
             <nav>
-                <router-link to="/" v-if="whitelogo"><img src="images/roku_white.svg" class="logo" alt="Roku Logo"></router-link >
+                <router-link to="/"><img src="images/roku_white.svg" class="logo" alt="Roku Logo"></router-link >
                 
                 <div class="rightWrapper">
 

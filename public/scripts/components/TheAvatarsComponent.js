@@ -12,7 +12,7 @@ export default {
     template: `
         <section class="profilesPage">
 
-            <img src="images/users_bg.jpg" class="drawnBackground" draggable="false">
+            <img src="images/users_bg.jpg" class="mainbg" draggable="false">
 
             <header-area @pairData="getData"></header-area>
             

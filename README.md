@@ -5,7 +5,11 @@
 ## Client server [Here for dowload:](https://github.com/digitalruben/Osorio_Ruben-RokuServer)
 
 The Database is inside the server repo provided above.
+
+## Login info:
+
 Username: user1
+
 pass: password
 
 ## Prototype: [Prototype](https://ruben741163.invisionapp.com/console/share/3M1XOUWYHT)

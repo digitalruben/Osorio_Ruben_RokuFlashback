@@ -1,13 +1,13 @@
 export default {
     name: "HeaderComponent",
 
-    props: ["settings", "edit", "reachedhome", "adults", "kids", "whitelogo"],
+    props: ["settings", "edit", "reachedhome", "adults", "kids"],
 
     template: `
         <header>
             
             <nav>
-                <router-link to="/" v-if="whitelogo"><img src="images/roku_white.svg" class="logo" alt="Roku Logo"></router-link >
+                <router-link to="/"><img src="images/roku_white.svg" class="logo" alt="Roku Logo"></router-link >
                 <router-link to="/adultsmovies">MOVIES</router-link>
                 <router-link to="/adultstv">TV</router-link>
                 <router-link to="/adultsmusic">MUSIC</router-link>
@@ -28,7 +28,7 @@ export default {
 
                     </div>
 
-                    <button v-if="settings" @click="openSettings()"><img src="images/settings.svg" class="navIcon" alt="Settings Icon"></button>
+                    <button v-if="settings" @click="openSettings()"><img src="images/settings.png" class="navIcon" alt="Settings Icon"></button>
                 
                 </div>
             </nav>

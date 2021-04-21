@@ -9,18 +9,18 @@ export default {
     template: `
     <section id="kidsMedia">
 
-        <header-area :kids=kids :reachedhome=reachedhome @pairData="getData" :whitelogo=whitelogo></header-area>
+        <header-area :kids=kids :reachedhome=reachedhome @pairData="getData"></header-area>
 
         <!-- Lightbox player -->
-        <section class="highlightArea" @click=playVideo()>
-            <iframe :src="highlight.movies_media+'?playlist='+this.playlist+'&autoplay=1&mute=1&loop=1&controls=0'" width="100%" height="800px" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <img src="images/play_media.svg" alt="Play" @click="playVideo()" v-if="!playvideo">
+        <section class="lightboxArea" @click=playVideo()>
+            <iframe :src="lightbox.movies_media+'?playlist='+this.playlist+'&autoplay=1&mute=1&loop=1&controls=0'" width="100%" height="800px" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src="images/play.svg" alt="Play" @click="playVideo()" v-if="!playvideo">
             <h3>Welcome kids!</h3>
         </section>
 
         <div  v-if="playvideo" class="mediaBox">
             <button @click="closeVideo()"><img src="images/close.svg"></button>
-            <iframe :src="highlight.movies_media+'?rel=0&autoplay=1'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <iframe :src="lightbox.movies_media+'?rel=0&autoplay=1'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         </div>
 
         <!-- Kids Movies Section -->
@@ -60,7 +60,7 @@ export default {
             allmovies: [],
             alltvs: [],
             allmusic: [],
-            highlight: {},
+            lightbox: {},
             playlist: "",
             playvideo: false
         }
@@ -68,15 +68,14 @@ export default {
 
     created: function () {
         this.reachedhome = true;
-        this.whitelogo = true;
         this.kids = true;
 
         fetch('/api/kids/movies')
             .then(res => res.json())
             .then(movie => {
                 this.allmovies = movie;
-                this.highlight = movie[Math.floor(Math.random() * movie.length)];
-                this.playlist = this.highlight.movies_media.split("embed/").pop();
+                this.lightbox = movie[Math.floor(Math.random() * movie.length)];
+                this.playlist = this.lightbox.movies_media.split("embed/").pop();
             })
             .catch((err) => console.error(err));
 

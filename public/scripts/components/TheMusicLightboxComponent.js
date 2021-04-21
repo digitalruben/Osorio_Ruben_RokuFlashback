@@ -1,26 +1,26 @@
 export default {
     name: "MusicLightbox",
 
-    props: ["highlight"],
+    props: ["lightbox"],
 
     data() {
         return {
-            showdetails: false,
+            showInfo: false,
         }
     },
 
     template: `
         <section>
-            <div class="highlightThumbnail">
-                <img :src="'images/music/' + highlight.music_thumbnail" :alt="highlight.music_title" @click="showAudioDetails()">
+            <div class="lightboxThumb">
+                <img :src="'images/music/' + lightbox.music_thumbnail" :alt="lightbox.music_title" @click="showAudio()">
             </div>
 
-            <div class="detailsBox musicHighlight" v-if="showdetails">
-                <button @click="closeAudioDetails()"><img src="images/arrow.svg"><span>BACK</span></button>
+            <div class="detailsBox musicLightbox" v-if="showInfo">
+                <button @click="closeAudio()"><img src="images/arrow.svg"><span>BACK</span></button>
                 <div class="musicPlayerArea">
-                <img :src="'images/music/' + highlight.music_thumbnail" :alt="highlight.music_title" @click="playAudio()" draggable="false">
+                <img :src="'images/music/' + lightbox.music_thumbnail" :alt="lightbox.music_title" @click="playAudio()" draggable="false">
                 <audio controls>
-                    <source :src="'music/'+ highlight.music_media" type="audio/mpeg">
+                    <source :src="'music/'+ lightbox.music_media" type="audio/mpeg">
                 </audio>
             </div>
 
@@ -28,14 +28,14 @@ export default {
     `,
 
     methods: {
-        showAudioDetails() {
-            this.showdetails = true;
+        showAudio() {
+            this.showInfo = true;
         },
-        closeAudioDetails() {
-            this.showdetails = false;
+        closeAudio() {
+            this.showInfo = false;
         },
         playAudio() {
-            console.log(this.highlight.music_title);
+            console.log(this.lightbox.music_title);
         },
     }
 }
